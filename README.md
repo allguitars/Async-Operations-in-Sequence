@@ -1,4 +1,4 @@
-# Looping over Async Operations in Sequence
+# Iterating over Async Operations in Sequence
 
 I had this problem when I was trying to grab the information from different pages of PTT's webBBS version although this issue may also happen on other websites that present the information with many subpages.
 
@@ -28,7 +28,7 @@ The original ``request`` supports both streaming and callback interfaces nativel
 
 I was targeting the _Hong_Kong_ section on PTT. There is less traffic with this section so I can easily compare the execution output of my code with the real arrangement of the articles and see if the pages are processed/printed in sequence. The latest page's link is always https://www.ptt.cc/bbs/Hong_Kong/index.html. When I was doing the inspection, the link to the previous page was https://www.ptt.cc/bbs/Hong_Kong/index1401.html, and the next previous link is https://www.ptt.cc/bbs/Hong_Kong/index1400.html, and so on.
 
-So, I created an array of the indices which I can loop over with to get the article pages in order.
+So, I created an array of the indices which I can iterate over with to get the article pages in order.
 
 ```js
 const baseURL = 'https://www.ptt.cc/bbs';
@@ -129,9 +129,9 @@ Compare the result with the webpage, and it was correct.
 
 <br>
 
-## Start to Loop
+## Start to Iterate
 
-Now, let's loop over the pages with the indices in the array ``pageIndex``. 
+Now, let's iterate over the pages with the indices in the array ``pageIndex``. 
 
 Adding the loop to our code:
 
