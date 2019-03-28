@@ -251,11 +251,11 @@ async function execDelay() {
 execDelay();
 ```
 
-The result will be seeing the 'Hello' string and then wait for three seconds and finish. That proved the delay did work.
+The result will be seeing the 'Hello' string and then wait for three seconds and finish the execution. That proved the delay did work.
 
 ### Combine the Delay with a For Loop
 
-Wrap the ``execDelay`` function with a for-loop.
+Wrap the ``delay`` function with a for-loop and put the for-loop inside the async ``execDelay`` function.
 
 ```js
 async function execDelay() {
@@ -296,13 +296,12 @@ async function getTitles() {
   for (const index of pageIndex) {
     const uri = `${baseURL}/${boardName}/index${index}.html`;
     console.log(uri);
-
     const options = {
       uri,
       transform
     };
 
-    // await the aync operation here
+    // Await the aync operation here
     await rp(options)
       .then($ => {
         const titles = $('.title a');
