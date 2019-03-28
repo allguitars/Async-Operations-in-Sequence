@@ -1,6 +1,6 @@
 # Iterating Async Operations in Sequence
 
-I had this problem when I was trying to grab the information from different pages of PTT's webBBS version although this issue may also happen on other websites that present the information with many subpages.
+I had this problem when I was trying to grab the information from different pages of PTT webBBS although this issue may also happen on other websites that present the information with many subpages.
 
 This implementation requires the following modules.
 
@@ -129,7 +129,7 @@ Compare the result with the webpage, and it was correct.
 
 <br>
 
-## Start to Iterate
+## Adding Iteration
 
 Now, let's iterate the pages with the indices in the array ``pageIndex``. 
 
